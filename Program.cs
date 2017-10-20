@@ -1,27 +1,28 @@
 ﻿using System;
-namespace Loops
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace foreach_loop
 {
     class Program
     {
         static void Main(string[] args)
         {
-            /* local variable definition */
-            int a = 10;
+            string[] arr = new string[5]; // declaring array
 
+            //Storing value in array element
+            arr[0] = "Steven";
+            arr[1] = "Clark";
+            arr[2] = "Mark";
+            arr[3] = "Thompson";
+            arr[4] = "John";
 
-            /* do loop execution */
-            do
+            //retrieving value using foreach loop
+            foreach (string name in arr)
             {
-                Console.WriteLine("value of a: {0}", a);
-                a = a + 1;
+                Console.WriteLine("Hello " + name);
             }
-            while (a > 20);
-
-            //while (a > 20)
-            //{
-            //    Console.WriteLine("value of a: {0}", a);
-            //    a++;
-            //}
             Console.ReadLine();
         }
     }
